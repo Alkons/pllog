@@ -1,0 +1,1 @@
+import "./trainings.html"
