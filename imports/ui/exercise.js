@@ -3,6 +3,12 @@ import { Template } from 'meteor/templating';
 import { Exercises } from '../api/exercises.js';
 import "./exercise.html"
 
+Template.body.onCreated(function bodyOnCreated() {
+    console.log("subscribing on exercises.")
+    this.state = new ReactiveDict();
+    Meteor.subscribe('exercises');
+});
+
 Template.body.helpers({
     exercises() {
         return Exercises.find({})
@@ -10,7 +16,7 @@ Template.body.helpers({
 });
 
 Template.body.events({
-    'submit .new-task' (event) {
+    'submit .new-exercise' (event) {
         console.log("Event");
         console.log(event);
         event.preventDefault();
@@ -18,10 +24,7 @@ Template.body.events({
         const target = event.target;
         const name = target.name.value;
 
-        Exercises.insert({
-            name,
-            createdAt: new Date(),
-        });
+        Meteor.call('exercises.insert', name);
 
         target.name.value = '';
     },

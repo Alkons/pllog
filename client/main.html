@@ -20,7 +20,7 @@
     </nav>
     <div id="hometab" class="col s12">{{> home}}</div>
     <div id="exercisestab" class="col s12">
-        <form class="new-task">
+        <form class="new-exercise">
             <input type="text" name="name" placeholder="Type to add new exercise" />
             <input type="submit" value="submit" />
         </form>
@@ -31,48 +31,5 @@
     <div id="equipmenttab" class="col s12">{{> equipment}}</div>
     <div id="trainingstab" class="col s12">{{> trainings}}</div>
 
-
-    <!--<div class="mdl-layout mdl-js-layout mdl-layout-fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <div class="login-buttons">{{> loginButtons}}</div>
-                <span class="mdl-layout-title">Powerlifting log</span>
-            </div>
-            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Главная</a>
-                <a href="#scroll-tab-2" class="mdl-layout__tab">Упражнения</a>
-                <a href="#scroll-tab-3" class="mdl-layout__tab">Экипировка</a>
-                <a href="#scroll-tab-4" class="mdl-layout__tab">Тренировки</a>
-            </div>
-        </header>
-        <main class="mdl-layout__content">
-            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-                <div class="page-content">
-                    {{> home}}
-                </div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-                <div class="page-content">
-                    <form class="new-task">
-                        <input type="text" name="name" placeholder="Type to add new exercise" />
-                        <a id="submitbutton" href="#">Submit</a>
-                    </form>
-                    <ul>
-                        {{#each exercises}} {{> exercise}} {{/each}}
-                    </ul>
-                </div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-                <div class="page-content">
-                    {{> equipment}}
-                </div>
-            </section>
-            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-                <div class="page-content">
-                    {{> trainings}}
-                </div>
-            </section>
-        </main>
-    </div>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 </body>
