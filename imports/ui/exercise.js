@@ -28,4 +28,7 @@ Template.body.events({
 
         target.name.value = '';
     },
+    'click .delete' () {
+        Meteor.call('exercises.delete', this._id);
+    },
 });
